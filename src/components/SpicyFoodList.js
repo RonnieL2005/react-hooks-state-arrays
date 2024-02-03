@@ -5,8 +5,10 @@ function SpicyFoodList() {
   const [foods, setFoods] = useState(spicyFoods);
 
   function handleAddFood() {
-    const newFood = getNewRandomSpicyFood();
-    console.log(newFood);
+    const newFood = getNewSpicyFood();
+    const newFoodArray = [...foods, newFood];
+    setFoods(newFoodArray);
+  }
   }
 
   const foodList = foods.map((food) => (
